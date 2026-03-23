@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>4DGS360: Supplementary Video</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+    <style>
+      .scene-slide {
+        display: none;
+      }
+      .scene-slide.is-active {
+        display: block;
+      }
+      .video-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: #666;
+        text-align: center;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .video-label.is-ours {
+        color: #1367a7;
+      }
+      .video-col video {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+      }
+      .video-col + .video-col.has-divider {
+        border-left: 2px solid #ddd;
+        padding-left: 0.75rem;
+      }
+      .scene-pill-btn {
+        cursor: pointer;
+        padding: 0.4rem 1rem;
+        margin: 0.25rem;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 14px;
+        font-family: 'Google Sans', sans-serif;
+        transition: background-color 0.2s, color 0.2s;
+        background: #fff;
+        color: #444;
+        user-select: none;
+      }
+      .scene-pill-btn:hover {
+        background-color: #f0f0f0;
+      }
+      .scene-pill-btn.is-active {
+        background-color: #1772d0;
+        color: #fff;
+        border-color: #1772d0;
+        font-weight: 700;
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+      .video-row-label {
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+        margin-top: 4px;
+      }
+      .section-divider {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0));
+        margin: 0;
+      }
+      .section-desc {
+        font-size: 13px;
+        color: #777;
+        line-height: 1.6;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .section-desc span[style] {
+        font-size: inherit;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                4DGS360: 360° Gaussian Reconstruction of Dynamic Objects from a Single Video
+              </h1>
+              <div class="is-size-5 publication-authors" style="margin-bottom:0.5rem;">
+                <span class="author-block">Jae Won Jang<sup>1</sup>,</span>
+                <span class="author-block">Yeonjin Chang<sup>1</sup>,</span>
+                <span class="author-block">Wonsik Shin<sup>1</sup>,</span>
+                <span class="author-block">Juhwan Cho<sup>1</sup>,</span>
+                <span class="author-block">Nojun Kwak<sup>1</sup></span>
+              </div>
+              <div class="is-size-7 publication-authors">
+                <span class="author-block"><sup>1</sup>Seoul National University</span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block" style="display:inline-flex; flex-direction:column; align-items:center; gap:4px;">
+                    <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.6;">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                    <span style="font-size:11px; color:#999;">coming soon</span>
+                  </span>
+                  <span class="link-block" style="display:inline-flex; flex-direction:column; align-items:center; gap:4px;">
+                    <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.6;">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                    <span style="font-size:11px; color:#999;">coming soon</span>
+                  </span>
+                  <span class="link-block" style="display:inline-flex; flex-direction:column; align-items:center; gap:4px;">
+                    <a class="external-link button is-normal is-rounded is-dark" href="https://drive.google.com/drive/folders/17hUxN0cnu2SdpJpA374Kxt-ri7tr-Qyp?usp=drive_link" target="_blank">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== BULLET-TIME ===== -->
+    <section class="section" style="padding-top:1.5rem; padding-bottom:1.5rem;">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">360° Reconstruction Results</h2>
+
+        <!-- Goat + Jacket side by side -->
+        <div class="columns">
+          <!-- Goat -->
+          <div class="column">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Scene: Goat</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">HiMoR</span>
+                <video autoplay muted loop playsinline>
+                  <source src="./static/videos/bullet_goat/himor_goat.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="column video-col">
+                <span class="video-label is-ours">Ours</span>
+                <video autoplay muted loop playsinline>
+                  <source src="./static/videos/bullet_goat/ours_goat.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+          <!-- Jacket -->
+          <div class="column" style="border-left:2px solid #ddd; padding-left:1.25rem;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Scene: Jacket</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">HiMoR</span>
+                <video autoplay muted loop playsinline>
+                  <source src="./static/videos/bullet_jacket/himor_jacket.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="column video-col">
+                <span class="video-label is-ours">Ours</span>
+                <video autoplay muted loop playsinline>
+                  <source src="./static/videos/bullet_jacket/ours_jacket.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.8rem; color:#888; margin-top:1rem;">
+          <strong>TL;DR:</strong> We propose <span style="background-color: #FFFF00;">4DGS360</span> for 360° reconstruction of dynamic objects from a single video, and introduce <span style="background-color: #FFFF00;">iPhone360</span>, a new monocular 4D dataset for evaluation at extreme novel views.
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ===== ABSTRACT ===== -->
+    <section class="section" style="padding-top:2rem; padding-bottom:2rem;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce 4DGS360, a diffusion-free framework for 360° dynamic object
+                reconstruction from casual monocular video. Existing methods often fail to
+                reconstruct consistent 360° geometry, as their heavy reliance on 2D-native priors
+                causes initial points to overfit to visible surfaces in each training view.
+                4DGS360 addresses this challenge through an advanced 3D-native initialization that
+                mitigates the geometric ambiguity of occluded regions. Our proposed 3D tracker,
+                AnchorTAP3D, produces reinforced 3D point trajectories by leveraging confident 2D
+                track points as anchors, suppressing drift and providing reliable initialization
+                that preserves geometry in occluded regions. This initialization, combined with
+                optimization, yields coherent 360° 4D reconstructions. We further present
+                iPhone360, a new benchmark where test cameras are placed up to 135° apart from
+                training views, enabling 360° evaluation that existing datasets cannot provide.
+                Experiments show that 4DGS360 achieves state-of-the-art performance on the
+                iPhone360, iPhone, and DAVIS datasets, both qualitatively and quantitatively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="container is-max-desktop">
+        <img src="./static/images/2_method_eccv.png" style="width:80%; display:block; margin:0 auto; border-radius:6px;" />
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ===== IPHONE360 DATASET ===== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">iPhone360 Dataset Overview</h2>
+        <p class="content">
+          We introduce a new <span style="background-color: #fff3cd; padding: 0 3px; border-radius: 3px;">iPhone360 dataset</span>, a new real-world dataset that addresses the evaluation
+          limitations of existing monocular dynamic datasets (HyperNeRF, iPhone). Unlike prior
+          benchmarks, iPhone360 places test cameras up to 90°–135° apart from training views,
+          enabling rigorous 360° novel-view evaluation.
+        </p>
+      </div>
+      <div class="container is-max-desktop" style="padding-left:5%; padding-right:5%;">
+
+
+        <!-- Row 1: Jacket + Jelly -->
+        <div class="columns" style="margin-bottom:1rem;">
+          <div class="column" style="flex: 2;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Jacket</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/jacket/train_jacket.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/jacket/test1_jacket.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="column" style="flex: 3; border-left:2px solid #ddd; padding-left:1.25rem;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Jelly</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/jelly/train_jelly.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test 1</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/jelly/test1_jelly.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col">
+                <span class="video-label">Test 2</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/jelly/test2_jelly.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Block2 + Goat -->
+        <div class="columns" style="margin-bottom:1rem;">
+          <div class="column" style="flex: 2;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Block2</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/block2/train_block2.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/block2/test1_block2.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="column" style="flex: 3; border-left:2px solid #ddd; padding-left:1.25rem;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Goat</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/goat/train_goat.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test 1</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/goat/test1_goat.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col">
+                <span class="video-label">Test 2</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/goat/test2_goat.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Pull-up + Walk-around -->
+        <div class="columns">
+          <div class="column" style="flex: 2;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Pull-up</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/pull-up/train_pullup.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/pull-up/test1_pullup.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="column" style="flex: 3; border-left:2px solid #ddd; padding-left:1.25rem;">
+            <p class="video-label" style="font-size:15px; margin-bottom:0.5rem;">Walk-around</p>
+            <div class="columns is-mobile is-variable is-1">
+              <div class="column video-col">
+                <span class="video-label">Train</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/walk-around/train_walkaround.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col has-divider">
+                <span class="video-label">Test 1</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/walk-around/test1_walkaround.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="column video-col">
+                <span class="video-label">Test 2</span>
+                <video autoplay muted loop playsinline><source src="./static/videos/walk-around/test2_walkaround.mp4" type="video/mp4" /></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+
+
+
+
+    <!-- ===== EXPERIMENTAL RESULTS ===== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Qualitative Results on iPhone360</h2>
+
+        <div class="pill-row" data-group="exp">
+          <span class="scene-pill-btn is-active" data-scene="jacket">Jacket</span>
+          <span class="scene-pill-btn" data-scene="jelly">Jelly</span>
+          <span class="scene-pill-btn" data-scene="block2">Block2</span>
+          <span class="scene-pill-btn" data-scene="goat">Goat</span>
+          <span class="scene-pill-btn" data-scene="pull-up">Pull-up</span>
+          <span class="scene-pill-btn" data-scene="walk-around">Walk-around</span>
+          <span class="scene-pill-btn" data-scene="block2">Block2</span>
+        </div>
+
+        <!-- jelly (test1 + test2) -->
+        <div class="scene-slide" id="exp-jelly">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">MoSca</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/train_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/gt_test1_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/mosca_test1_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/himor_test1_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/ours_test1_jelly.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col"></div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/gt_test2_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/mosca_test2_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/himor_test2_jelly.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jelly/ours_test2_jelly.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- pull-up (test1 only) -->
+        <div class="scene-slide" id="exp-pull-up">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">MoSca</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/pull-up/train_pullup.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/pull-up/gt_test1_pullup.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/pull-up/mosca_test1_pullup.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/pull-up/himor_test1_pullup.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/pull-up/ours_test1_pullup.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- goat (test1 + test2) -->
+        <div class="scene-slide" id="exp-goat">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">MoSca</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/train_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/gt_test1_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/mosca_test1_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/himor_test1_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/ours_test1_goat.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col"></div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/gt_test2_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/mosca_test2_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/himor_test2_goat.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/goat/ours_test2_goat.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- jacket (test1 only) -->
+        <div class="scene-slide is-active" id="exp-jacket">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">MoSca</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jacket/train_jacket.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/jacket/gt_test1_jacket.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jacket/mosca_test1_jacket.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jacket/himor_test1_jacket.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/jacket/ours_test1_jacket.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- walk-around (test1 + test2, baseline = SOM) -->
+        <div class="scene-slide" id="exp-walk-around">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">SOM</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/train_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/gt_test1_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/som_test1_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/himor_test1_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/ours_test1_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col"></div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/gt_test2_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/som_test2_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/himor_test2_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/walk-around/ours_test2_walkaround.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- block2 (test1 only) -->
+        <div class="scene-slide" id="exp-block2">
+          <div class="columns is-mobile is-variable is-2" style="margin-bottom:0.25rem;">
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">Train</span>
+            </div>
+            <div class="column is-one-fifth video-col has-divider has-text-centered">
+              <span class="video-label">GT</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">MoSca</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label">HiMoR</span>
+            </div>
+            <div class="column is-one-fifth video-col has-text-centered">
+              <span class="video-label is-ours">Ours</span>
+            </div>
+          </div>
+          <div class="columns is-mobile is-variable is-2">
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/block2/train_block2.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col has-divider">
+              <video autoplay muted loop playsinline><source src="./static/videos/block2/gt_test1_block2.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/block2/mosca_test1_block2.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/block2/himor_test1_block2.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="column is-one-fifth video-col">
+              <video autoplay muted loop playsinline><source src="./static/videos/block2/ours_test1_block2.mp4" type="video/mp4" /></video>
+            </div>
+          </div>
+        </div>
+        <p class="section-desc">
+          Our model consistently outperforms the baseline models in extreme novel-view
+          reconstruction across all scenes in the iPhone360 dataset. For the pull-up and block2
+          scenes, the baseline models achieve reasonable reconstruction in the early frames where
+          the angular difference between the training and test cameras is relatively small.
+          However, as the angle between the two cameras increases and the viewpoint shifts
+          further, the baseline models exhibit a significant degradation in reconstruction quality
+          compared to ours.
+        </p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ===== MORE RESULTS ===== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">More Results &mdash; w/o GT</h2>
+
+        <h3 class="title is-5" style="margin-bottom:1rem;">iPhone Dataset</h3>
+        <div class="has-text-centered" style="margin-bottom:1rem;">
+          <img src="./static/images/5_harusit_eccv.png" style="width:80%; border-radius:6px;" />
+          <p class="section-desc" style="margin-top:0.4rem;">Haru-sit</p>
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/6_backpack.png" style="width:80%; border-radius:6px;" />
+          <p class="section-desc" style="margin-top:0.4rem;">Backpack</p>
+        </div>
+
+        <h3 class="title is-5" style="margin-bottom:1rem; margin-top:2.5rem;">DAVIS</h3>
+        <div class="has-text-centered">
+          <img src="./static/images/7_davis_eccv.png" style="width:80%; border-radius:6px;" />
+          <p class="section-desc" style="margin-top:0.4rem;">car-roundabout</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content has-text-centered">
+              <p>
+                This webpage template is borrowed from
+                <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scene pill switcher
+      // Each pill-row has data-group, each pill has data-scene.
+      // Corresponding slides have id = "{group}-{scene}".
+      document.querySelectorAll('.pill-row').forEach(function (pillRow) {
+        const group = pillRow.getAttribute('data-group');
+        const pills = pillRow.querySelectorAll('.scene-pill-btn');
+
+        pills.forEach(function (pill) {
+          pill.addEventListener('click', function () {
+            const scene = this.getAttribute('data-scene');
+            const targetId = group + '-' + scene;
+
+            // Update pill active state
+            pills.forEach(function (p) { p.classList.remove('is-active'); });
+            this.classList.add('is-active');
+
+            // Find all slides in this group (siblings under same section)
+            const section = pillRow.closest('section');
+            const slides = section.querySelectorAll('.scene-slide');
+
+            // Pause videos in current active slide
+            slides.forEach(function (slide) {
+              if (slide.classList.contains('is-active')) {
+                slide.querySelectorAll('video').forEach(function (v) { v.pause(); });
+              }
+              slide.classList.remove('is-active');
+            });
+
+            // Show and play target slide
+            const target = document.getElementById(targetId);
+            if (target) {
+              target.classList.add('is-active');
+              target.querySelectorAll('video').forEach(function (v) {
+                v.currentTime = 0;
+                v.play().catch(function () {});
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
