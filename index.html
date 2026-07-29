@@ -8,6 +8,20 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌏</text></svg>">
+	<style>
+		.profilePicWrap {
+			position: relative;
+		}
+		.profilePicWrap .profilePicHover {
+			display: none;
+		}
+		.profilePicWrap:hover .profilePicDefault {
+			display: none;
+		}
+		.profilePicWrap:hover .profilePicHover {
+			display: block;
+		}
+	</style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -40,13 +54,22 @@
               <p style="text-align:center">
                 <a href="mailto:pert0407@snu.ac.kr">Email</a> &nbsp/&nbsp
                 <!-- <a href="data/SeunghyeonSeo_CV.pdf">CV</a> &nbsp/&nbsp -->
-                <a href="https://scholar.google.com/citations?hl=en&user=K_U4ZMQAAAAJ">Google Scholar</a> 
-                <!-- <a href="https://www.linkedin.com/in/shawn615/">LinkedIn</a> &nbsp/&nbsp -->
-                <!-- <a href="https://github.com/shawn615/">Github</a> -->
+                <a href="https://scholar.google.com/citations?hl=en&user=K_U4ZMQAAAAJ">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://x.com/jaewon040">X</a> &nbsp/&nbsp
+                <a href="https://github.com/Jaewon040">Github</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/white.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/white.png" class="hoverZoomLink"></a>
+              <div class="profilePicWrap">
+                <div class="profilePicDefault">
+                  <a href="images/me.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/me.jpeg" class="hoverZoomLink"></a>
+                  <p style="text-align:center;font-size:small;visibility:hidden;">me on iphone360 dataset</p>
+                </div>
+                <div class="profilePicHover">
+                  <img style="width:100%;max-width:100%" alt="Me on iPhone360 dataset!" src="images/datame.png">
+                  <p style="text-align:center;font-size:small;">me on iphone360 dataset</p>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody></table>
